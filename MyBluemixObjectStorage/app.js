@@ -9,6 +9,9 @@ var express = require('express');
 // cfenv provides access to your Cloud Foundry environment
 var cfenv = require('cfenv');
 
+//declare this web application's base URL
+var appURL = 'https://mybluemixobjectstorage.eu-gb.mybluemix.net';
+
 // and, cheekily, introduce the capability to sleep ...
 var sleep = require('sleep');
 
@@ -86,7 +89,7 @@ app.engine('html', require('ejs').renderFile);
 app.get('/', function(req, res) {
     //console.log('GET Request on /');
     BMXOS_CLIENT.getFiles(CONTAINER, function (err, files) {
-		res.render('main.ejs', { containerFiles: files});
+		res.render('main.ejs', { containerFiles: files, appURL: appURL});
 	});
 });
 
