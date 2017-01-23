@@ -1,0 +1,13 @@
+<form id="upload-form" enctype="multipart/form-data" action="http://mybluemixobjectstorage.eu-gb.mybluemix.net/store" method="post">
+	<div class="input-group" style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px">
+		<input id="hiddenfileinput" type="file" name="file-to-upload" class="file" style="display: none;"
+			onChange="getElementById('visiblefileinput').value=getElementById('hiddenfileinput').value;$('#upload').show();$('#reset').show();">
+      <span class="input-group-addon" style="background-color: #fff; border-right-color: #fff; border-top-left-radius: 4px; border-bottom-left-radius: 4px; font-weight: bold;">Select a File to Upload</span>
+      <input id="visiblefileinput" type="text" class="form-control" placeholder="File name" readonly="readonly">
+      <span class="input-group-btn">
+        <button id="reset" class="btn btn-warning" type="button" style="display: none;" onClick="console.log('Pressed Reset');getElementById('hiddenfileinput').value='';getElementById('visiblefileinput').value='';$('#upload').hide();$('#reset').hide();"><i class="glyphicon glyphicon-ban-circle" style="padding-right: 5px;"></i>Reset</button>
+        <button id="upload" class="btn btn-success" type="button" style="display: none;" onClick="console.log('Pressed Upload');$('#upload-form').submit();"><i class="glyphicon glyphicon-upload" style="padding-right: 5px;"></i>Upload</button>
+        <button class="btn btn-primary" type="button" onClick="console.log('Pressed Select File');getElementById('hiddenfileinput').click()"><i class="glyphicon glyphicon-folder-open" style="padding-right: 10px;"></i>Browse ...</button>
+      </span>
+    </div>
+</form>

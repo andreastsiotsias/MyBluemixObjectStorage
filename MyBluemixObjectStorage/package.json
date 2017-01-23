@@ -1,0 +1,22 @@
+{
+	"name": "MyBluemixObjectStorage",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "4.13.x",
+		"cfenv": "1.0.x",
+		"pkgcloud": "1.4.x",
+		"ejs": "2.5.x",
+		"jade": "1.11.x",
+		"multer": "1.2.x",
+		"multer-storage-pkgcloud": "1.2.1",
+		"sleep": "5.x.x"
+	},
+	"repository": {},
+	"engines": {
+		"node": "4.x"
+	} 
+}

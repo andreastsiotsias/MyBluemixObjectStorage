@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: MyBluemixObjectStorage
+  host: MyBluemixObjectStorage
+  disk_quota: 1024M
+  services:
+  - Object Storage-ds
+  env:
+    DEFAULT_CONTAINER: staging01
